@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void){
+	int * ar;
+	int i, laenge;
+	printf("Wieviele Zahlen moechten Sie einlesen : ");
+	scanf("%d", &laenge);
+	
+	/* Speicherplatz anfordern */
+	
+	
+	for(i = 0; i < laenge; i++)
+		scanf("%d", &ar[i]);
+		
+	/* Hier Coding ergaenzen */
+
+	/* Speicherplatzfreigeben */
+	
+	
+	return 0;
+}

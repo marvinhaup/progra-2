@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+typedef struct {
+    char name[26];
+    float wert;
+    int aMod;
+    int vMod;
+} Item;
+
+typedef struct {
+    int level;
+    float gold;
+    Item* inhalt;
+} Treasure;
+
+Item createItem(char*,float,int,int);
+Treasure createTreasure(int,float,Item*);
+void printTreasure(Treasure*);
+void changeName(Item*,char[]);
+
+int main()
+{
+    Item kampfaxt = {"Kampfaxt", 15.5,1,0};
+    Item holzschild = {"Holzschild",3,0,2};
+    Item stiefel = createItem("Stiefel der Nutzlosigkeit",0,0,-1);
+    Treasure truhe1 = {6,20.0,&holzschild};
+    Treasure truhe2 = createTreasure(3,10.5,&stiefel);
+    changeName(&holzschild, "Eisenschild");
+    printf("Name des Gegenstandes: %s\n", holzschild.name);
+    printTreasure(&truhe1);
+    printTreasure(&truhe2);
+    return 0;
+}
+
+Item createItem(char *name, float w, int a, int v){
+    Item neuerGegenstand;
+    strcpy(neuerGegenstand.name,name);
+    neuerGegenstand.wert = w;
+    neuerGegenstand.aMod = a;
+    neuerGegenstand.vMod = v;
+    return neuerGegenstand;
+}
+
+Treasure createTreasure(int l, float g, Item *i){
+    Treasure neueTruhe;
+    neueTruhe.level = l;
+    neueTruhe.gold = g;
+    neueTruhe.inhalt = i;
+    return neueTruhe;
+}
+
+void printTreasure(Treasure *t){
+    printf("**** Truhe ****\n");
+    printf("Level: \t%d\n", t->level);
+    printf("Gold: \t%.2f\n", t->gold);
+    printf("Inhalt: %s\n\n", t->inhalt->name);
+}
+
+void changeName(Item *gegenstand, char name[]){
+    strcpy(gegenstand->name,name);
+}
+

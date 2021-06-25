@@ -1,0 +1,18 @@
+int countLetters(FILE*);
+
+int main()
+{
+    int numberOfLetters;
+    char fileName[256];
+
+    FILE* fin;
+    printf("Geben Sie den Namen der Datei ein: ");
+    scanf("%s", fileName);
+
+
+
+    printf("Die Anzahl an Buchstaben in der Datei %s ist: %d", fileName, numberOfLetters);
+    fclose(fin);
+
+    return 0;
+}

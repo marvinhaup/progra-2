@@ -1,0 +1,28 @@
+void swapPointer(int*, int*);
+
+int main()
+{
+    int a = 1, b = 2;
+    int *ap, *bp;
+
+    ap = &a;
+    bp = &b;
+
+    printf("Vor dem Tausch \n");
+    printf("Gespeicherte Adresse in AP: %p, Dereferenzierung von AP: %d\n",ap,*ap);
+    printf("Gespeicherte Adresse in BP: %p, Dereferenzierung von BP: %d\n",bp,*bp);
+
+    swapPointer(ap,bp);
+
+    printf("\nNach dem Tausch\n");
+    printf("Gespeicherte Adresse in AP: %p, Dereferenzierung von AP: %d\n",ap,*ap);
+    printf("Gespeicherte Adresse in BP: %p, Dereferenzierung von BP: %d\n",bp,*bp);
+
+    return 0;
+}
+
+void swapPointer(int *p1, int*p2){
+    int *tmp = p1;
+    p1 = p2;
+    p2 = tmp;
+}

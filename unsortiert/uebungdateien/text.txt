@@ -1,0 +1,12 @@
+3
+Max Mustermann
+Medieninformatik
+1.4
+
+Gabi Lustig
+Maschinenbau
+2.7
+
+Fritz Fischer
+Medieninformatik
+3.0

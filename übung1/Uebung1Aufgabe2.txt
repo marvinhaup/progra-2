@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct {
+	float x;
+float y;
+} coordinate_t;
+
+coordinate_t* getCoordinateArray (int n) 
+{
+	/* hier ergänzen */
+
+}
+
+int main ( void)
+{
+	coordinate_t *q;
+	int i = 0;
+
+	q = getCoordinateArray(10);
+
+
+	for ( i=0; i < 10; i++)
+		printf("(%f,%f)\n", q[i].x, q[i].y);
+		free(q);
+	return 0;
+}	

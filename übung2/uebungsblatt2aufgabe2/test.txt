@@ -1,0 +1,4 @@
+Name: Mustermann
+Vorname: Manfred
+Strasse: Campus-Allee 1
+Ort: 55761 Birkenfeld

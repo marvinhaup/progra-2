@@ -1,0 +1,17 @@
+int main()
+{
+    int zahlen[] = {1,2,3,4};
+    int negZahlen[] = {-1,-2,-3,-4};
+
+    printf("Vor Swap: \n");
+    printArray(zahlen,4);
+    printArray(negZahlen, 4);
+
+    swapArray(zahlen,negZahlen,4);
+
+    printf("\n\nNach Swap:\n");
+    printArray(zahlen,4);
+    printArray(negZahlen,4);
+
+    return 0;
+}
